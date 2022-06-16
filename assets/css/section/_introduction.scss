@@ -1,0 +1,20 @@
+.introduction {
+    .ct-text-block + .ct-text-block,
+    .oxy-rich-text + .oxy-rich-text,
+    .oxy-rich-text + .ct-text-block {
+        margin-top: 2rem;
+    }
+}
+.faq-wrapper {
+    padding: 1rem;
+    h1.ct-headline {
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .description-rock {
+        div.ct-section-inner-wrap {
+            padding-bottom: 5rem;
+        }
+    }
+}

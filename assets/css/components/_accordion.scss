@@ -1,0 +1,42 @@
+.accordion {
+    background: transparent;
+    color: $primary;
+    cursor: pointer;
+    padding: 1.5rem 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: clamp(1rem, 3vw, 2rem);
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// .active,
+// .accordion:hover {
+//     background-color: #ccc;
+// }
+
+.accordion:after {
+    content: "+";
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "-";
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    p {
+        font-size: clamp(12px, 3vw, 20px);
+        color: $neutrals-5;
+    }
+}

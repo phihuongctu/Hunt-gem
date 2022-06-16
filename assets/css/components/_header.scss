@@ -1,0 +1,52 @@
+.oxy-header-wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(
+        180deg,
+        #0000008f 0%,
+        rgba(9, 9, 121, 0) 48%,
+        rgba(0, 0, 0, 0.02) 80%
+    );
+}
+.oxy-nav-menu .oxy-nav-menu-list li.menu-item {
+    margin-left: 3rem;
+    a {
+        color: $neutrals-8;
+        font-weight: 600;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+#_nav_menu-12-25 div.oxy-nav-menu-hamburger {
+    height: 1.25rem;
+    .oxy-nav-menu-hamburger-line:last-child {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    #_nav_menu-12-25.oxy-nav-menu-open div.oxy-nav-menu-hamburger {
+        height: 25px;
+        .oxy-nav-menu-hamburger-line:last-child {
+            display: block;
+        }
+    }
+}
+
+.oxy-nav-menu-open {
+    .oxy-nav-menu-list li.menu-item {
+        margin-left: 0;
+    }
+}
+.footer {
+    position: fixed;
+    bottom: 2rem;
+    z-index: 2;
+    width: 100%;
+    a + a {
+        margin-left: 3rem;
+    }
+}

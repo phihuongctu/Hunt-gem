@@ -371,10 +371,6 @@ div.grid-layout.content-center {
   display: none;
 }
 
-ul {
-  list-style: unset;
-}
-
 .ct-section-inner-wrap {
   width: 100%;
   height: auto;
@@ -643,6 +639,7 @@ p a {
 .oxy-nav-menu .oxy-nav-menu-list li.menu-item a {
   color: #fcfcfd;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .oxy-nav-menu .oxy-nav-menu-list li.menu-item a:hover {
@@ -679,6 +676,18 @@ p a {
 
 .footer a + a {
   margin-left: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .oxy-header-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .oxy-header-right .oxy-nav-menu {
+    margin-left: 1rem;
+  }
 }
 
 .accordion {
@@ -726,6 +735,41 @@ p a {
 .panel p {
   font-size: clamp(12px, 3vw, 20px);
   color: #b1b5c3;
+}
+
+.wpml-ls-legacy-dropdown-click {
+  width: auto;
+  margin-left: 1rem;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover > a {
+  background: transparent;
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+  background: transparent;
+  border: unset;
+  padding-right: 0;
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle img {
+  margin-right: 0.75rem;
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
+  content: url("/modules/huntgem/assets/img/CaretDown.png");
+  vertical-align: middle;
+  display: inline-block;
+  position: unset;
+  border: unset;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+  border: unset;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu a {
+  border-radius: 4px;
 }
 
 @font-face {

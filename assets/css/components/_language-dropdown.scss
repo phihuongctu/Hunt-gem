@@ -1,0 +1,28 @@
+.wpml-ls-legacy-dropdown-click {
+    width: auto;
+    margin-left: 1rem;
+    .wpml-ls-current-language:hover > a {
+        background: transparent;
+    }
+    a.wpml-ls-item-toggle {
+        background: transparent;
+        border: unset;
+        padding-right: 0;
+        img {
+            margin-right: 0.75rem;
+        }
+        &:after {
+            content: url(str-insert("/assets/img/CaretDown.png", $path, 1));
+            vertical-align: middle;
+            display: inline-block;
+            position: unset;
+            border: unset;
+        }
+    }
+    .wpml-ls-sub-menu {
+        border: unset;
+        a {
+            border-radius: 4px;
+        }
+    }
+}

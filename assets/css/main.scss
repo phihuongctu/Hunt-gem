@@ -5,9 +5,10 @@
 @import "animation";
 
 @import "./section/introduction";
+
 @import "./components/header";
 @import "./components/accordion";
-
+@import "./components/language-dropdown";
 @font-face {
     font-family: $Galactus;
     font-weight: 500;

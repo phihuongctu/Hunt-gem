@@ -24,6 +24,10 @@ document.querySelector('.wheel').addEventListener("click", function () {
     fullpage_api.moveSectionDown();
 });
 
+// document.querySelector('.back-to-top').addEventListener("click", function () {
+//     fullpage_api.moveTo(0);
+// });
+
 document.addEventListener("DOMContentLoaded", function (event) {
     if (document.querySelector('.splide') !== null) {
         var splide = new Splide('.splide', {

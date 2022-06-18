@@ -24,9 +24,9 @@ document.querySelector('.wheel').addEventListener("click", function () {
     fullpage_api.moveSectionDown();
 });
 
-// document.querySelector('.back-to-top').addEventListener("click", function () {
-//     fullpage_api.moveTo(0);
-// });
+document.querySelector('.back-top').addEventListener("click", function () {
+    fullpage_api.moveTo(1);
+});
 
 document.addEventListener("DOMContentLoaded", function (event) {
     if (document.querySelector('.splide') !== null) {

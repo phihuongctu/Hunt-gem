@@ -104,6 +104,25 @@ bdi {
     opacity: 1;
     pointer-events: auto;
 }
+.back-top {
+    display: grid;
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    width: 40px;
+    height: 40px;
+    place-content: center;
+    cursor: pointer;
+    opacity: 1;
+    backdrop-filter: contrast(0.5);
+    border-radius: 50%;
+}
+.fp-viewing-1,
+.fp-viewing-0 {
+    .back-top {
+        display: none;
+    }
+}
 @media screen and (max-width: 768px) {
     .fp-viewing-3,
     .fp-viewing-4 {
@@ -141,7 +160,7 @@ bdi {
 
 div.roadmap {
     grid-column-gap: 0px;
-    grid-row-gap: 6rem;
+    grid-row-gap: 2rem;
     padding-right: 6rem;
     border-radius: 0 20rem 20rem 0;
     border: 2px solid rgba(255, 255, 255, 0.4);

@@ -1,5 +1,5 @@
 
-
+//fullpage
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
     new fullpage('.fullpage', {
@@ -23,17 +23,17 @@ if (isMobile) {
     });
 }
 
-document.querySelector('.wheel').addEventListener("click", function () {
-    fullpage_api.moveSectionDown();
-});
-
-document.querySelector('.back-top').addEventListener("click", function () {
-    fullpage_api.moveTo(1);
-});
-
-
-//slider
 document.addEventListener("DOMContentLoaded", function (event) {
+    //fullpage
+    document.querySelector('.wheel').addEventListener("click", function () {
+        fullpage_api.moveSectionDown();
+    });
+
+    document.querySelector('.back-top').addEventListener("click", function () {
+        fullpage_api.moveTo(1);
+    });
+
+    //slider
     if (document.querySelector('.splide') !== null) {
         var splide = new Splide('.splide', {
             type: 'loop',
@@ -53,10 +53,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
         splide.mount();
     }
-});
 
-//accordion
-document.addEventListener("DOMContentLoaded", function (event) {
+    //accordion
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -71,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             };
         });
     }
-})
+});
+
 
 
 

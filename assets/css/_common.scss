@@ -312,7 +312,7 @@ h2.ct-headline {
 }
 
 h1.ct-headline {
-    font-size: clamp(2rem, 3vw, 4rem);
+    font-size: clamp(1.5rem, 3vw, 4rem);
     margin-bottom: 5rem;
     @media screen and (max-width: 768px) {
         margin-bottom: 2rem;
@@ -363,7 +363,7 @@ p a {
         padding: 0;
     }
     div.ct-section-inner-wrap {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         padding-top: 48px;
     }
 }

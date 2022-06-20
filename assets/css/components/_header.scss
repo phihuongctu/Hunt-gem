@@ -52,12 +52,3 @@
         margin-left: 3rem;
     }
 }
-
-@media screen and (max-width: 768px) {
-    .oxy-header-right {
-        flex-direction: row-reverse;
-        .oxy-nav-menu {
-            margin-left: 1rem;
-        }
-    }
-}

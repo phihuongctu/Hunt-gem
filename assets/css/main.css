@@ -408,7 +408,7 @@ h2.ct-headline {
 }
 
 h1.ct-headline {
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: clamp(1.5rem, 3vw, 4rem);
   margin-bottom: 5rem;
 }
 
@@ -467,7 +467,7 @@ p a {
     padding: 0;
   }
   div.ct-section-inner-wrap {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     padding-top: 48px;
   }
 }
@@ -699,28 +699,16 @@ p a {
   margin-left: 3rem;
 }
 
-@media screen and (max-width: 768px) {
-  .oxy-header-right {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .oxy-header-right .oxy-nav-menu {
-    margin-left: 1rem;
-  }
-}
-
 .accordion {
   background: transparent;
   color: #00FFFF;
   cursor: pointer;
-  padding: 1.5rem 18px;
+  padding: 0.5rem 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(14px, 3vw, 1.5rem);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   display: -webkit-box;
@@ -738,7 +726,11 @@ p a {
   content: "+";
   font-weight: bold;
   float: right;
-  margin-left: 5px;
+  margin-left: 1rem;
+}
+
+.accordion.active + .panel {
+  max-height: initial;
 }
 
 .active:after {
@@ -773,6 +765,26 @@ p a {
   padding: 0;
 }
 
+@media screen and (max-width: 550px) {
+  .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 50px;
+  }
+}
+
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle img {
   border-radius: 50%;
   -o-object-fit: cover;
@@ -780,7 +792,11 @@ p a {
 }
 
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
-  content: unset;
+  content: url("/modules/huntgem/assets/img/CaretDown.png");
+  display: inline-block;
+  position: unset;
+  border: unset;
+  margin-left: 0.5rem;
 }
 
 .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
@@ -799,6 +815,23 @@ p a {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.button-app.ct-link-button {
+  border: unset;
+  border-radius: 99px;
+  background: #00FFFF;
+  margin-left: 2rem;
+  color: #141416;
+  padding: 12px 16px;
+}
+
+@media screen and (max-width: 550px) {
+  .button-app.ct-link-button {
+    padding: 10px 12px;
+    font-size: 14px;
+    margin-left: 1rem;
+  }
 }
 
 @font-face {

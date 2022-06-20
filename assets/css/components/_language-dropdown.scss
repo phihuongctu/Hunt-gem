@@ -8,17 +8,28 @@
         background: transparent;
         border: unset;
         padding: 0;
+        @media screen and (max-width: 550px) {
+            font-size: 14px;
+        }
+        @media screen and (max-width: 375px) {
+            display: flex;
+            span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 50px;
+            }
+        }
         img {
             border-radius: 50%;
             object-fit: cover;
         }
         &:after {
-            content: unset;
-            // vertical-align: middle;
-            // display: inline-block;
-            // position: unset;
-            // border: unset;
-            // margin-left: 0.5rem;
+            content: url(str-insert("/assets/img/CaretDown.png", $path, 1));
+            display: inline-block;
+            position: unset;
+            border: unset;
+            margin-left: 0.5rem;
         }
     }
     .wpml-ls-sub-menu {
@@ -34,5 +45,18 @@
                 object-fit: cover;
             }
         }
+    }
+}
+.button-app.ct-link-button {
+    border: unset;
+    border-radius: 99px;
+    background: $primary;
+    margin-left: 2rem;
+    color: $neutrals-1;
+    padding: 12px 16px;
+    @media screen and (max-width: 550px) {
+        padding: 10px 12px;
+        font-size: 14px;
+        margin-left: 1rem;
     }
 }

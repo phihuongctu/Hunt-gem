@@ -6,6 +6,7 @@ if (isMobile) {
         //options here
         // autoScrolling: true,
         lazyLoading: false,
+        verticalCentered: true,
         css3: true,
         scrollingSpeed: 700,
         normalScrollElements: '.scroll-snap,.roadmap',
@@ -15,8 +16,10 @@ if (isMobile) {
         //options here
         // autoScrolling: true,
         lazyLoading: false,
+        verticalCentered: true,
         css3: true,
         scrollingSpeed: 700,
+        scrollOverflow: true
     });
 }
 
@@ -28,6 +31,8 @@ document.querySelector('.back-top').addEventListener("click", function () {
     fullpage_api.moveTo(1);
 });
 
+
+//slider
 document.addEventListener("DOMContentLoaded", function (event) {
     if (document.querySelector('.splide') !== null) {
         var splide = new Splide('.splide', {
@@ -51,19 +56,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 //accordion
-var acc = document.getElementsByClassName("accordion");
-var i;
+document.addEventListener("DOMContentLoaded", function (event) {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function (e) {
+            for (i = 0; i < acc.length; i++) {
+                if (acc[i] == e.target) {
+                    this.classList.toggle("active");
+                } else {
+                    acc[i].classList.remove("active");
+                }
+            };
+        });
+    }
+})
+
 
 

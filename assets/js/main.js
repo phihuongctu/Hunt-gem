@@ -9,7 +9,7 @@ if (isMobile) {
         verticalCentered: true,
         css3: true,
         scrollingSpeed: 700,
-        normalScrollElements: '.scroll-snap,.roadmap',
+        normalScrollElements: '.scroll-snap,.roadmap,.panel',
     });
 } else {
     new fullpage('.fullpage', {
@@ -19,7 +19,6 @@ if (isMobile) {
         verticalCentered: true,
         css3: true,
         scrollingSpeed: 700,
-        scrollOverflow: true
     });
 }
 

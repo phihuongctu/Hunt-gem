@@ -41,4 +41,10 @@
         font-size: clamp(12px, 3vw, 20px);
         color: $neutrals-5;
     }
+    @media screen and (max-width: 550px) {
+        .ct-text-block {
+            max-height: 100px;
+            overflow-y: scroll;
+        }
+    }
 }

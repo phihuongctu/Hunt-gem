@@ -78,6 +78,10 @@ bdi {
   display: inline-block;
 }
 
+.tp-bullets {
+  display: none !important;
+}
+
 .absulute-center {
   position: absolute;
   top: 50%;

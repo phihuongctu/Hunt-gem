@@ -70,6 +70,10 @@ bdi {
     display: inline-block;
 }
 
+.tp-bullets {
+    display: none !important;
+}
+
 .absulute-center {
     @include absolute-middle;
     width: 100%;

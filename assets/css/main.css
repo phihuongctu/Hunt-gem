@@ -210,10 +210,9 @@ div.roadmap div.roadmap-item {
             column-gap: 1rem;
     scroll-snap-align: start;
   }
-}
-
-div.roadmap div.roadmap-item + div.roadmap-item {
-  margin-left: 100%;
+  div.roadmap div.roadmap-item + div.roadmap-item {
+    margin-left: 100%;
+  }
 }
 
 div.roadmap div.roadmap-item + div.roadmap-item .roadmap-dot {
@@ -768,16 +767,16 @@ p a {
   background: transparent;
 }
 
+@media screen and (max-width: 550px) {
+  .wpml-ls-legacy-dropdown-click a {
+    font-size: 14px;
+  }
+}
+
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
   background: transparent;
   border: unset;
   padding: 0;
-}
-
-@media screen and (max-width: 550px) {
-  .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-    font-size: 14px;
-  }
 }
 
 @media screen and (max-width: 375px) {
@@ -837,8 +836,8 @@ p a {
 
 @media screen and (max-width: 550px) {
   .button-app.ct-link-button {
-    padding: 10px 12px;
-    font-size: 14px;
+    padding: 8px 10px;
+    font-size: 13px;
     margin-left: 1rem;
   }
 }

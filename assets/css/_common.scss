@@ -182,9 +182,11 @@ div.roadmap {
         @media screen and (max-width: 768px) {
             column-gap: 1rem;
             scroll-snap-align: start;
+            & + div.roadmap-item {
+                margin-left: 100%;
+            }
         }
         & + div.roadmap-item {
-            margin-left: 100%;
             .roadmap-dot {
                 top: 32px;
             }

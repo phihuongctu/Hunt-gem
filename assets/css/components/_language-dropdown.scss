@@ -4,13 +4,16 @@
     .wpml-ls-current-language:hover > a {
         background: transparent;
     }
+    @media screen and (max-width: 550px) {
+        a {
+            font-size: 14px;
+        }
+    }
+
     a.wpml-ls-item-toggle {
         background: transparent;
         border: unset;
         padding: 0;
-        @media screen and (max-width: 550px) {
-            font-size: 14px;
-        }
         @media screen and (max-width: 375px) {
             display: flex;
             span {
@@ -55,8 +58,8 @@
     color: $neutrals-1;
     padding: 12px 16px;
     @media screen and (max-width: 550px) {
-        padding: 10px 12px;
-        font-size: 14px;
+        padding: 8px 10px;
+        font-size: 13px;
         margin-left: 1rem;
     }
 }

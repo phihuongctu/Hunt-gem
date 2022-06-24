@@ -97,7 +97,7 @@ bdi {
     position: fixed;
     left: 50%;
     margin: 0 0 0 -20px;
-    bottom: 5rem;
+    bottom: 2rem;
     opacity: 0;
     pointer-events: none;
     width: 40px;
@@ -112,7 +112,7 @@ bdi {
     display: grid;
     position: fixed;
     right: 2rem;
-    bottom: 4rem;
+    bottom: 2rem;
     width: 40px;
     height: 40px;
     place-content: center;
@@ -194,6 +194,33 @@ div.roadmap {
             .roadmap-dot {
                 top: 32px;
             }
+            .content-s {
+                padding-top: 2rem;
+                &::after {
+                    content: url(str-insert(
+                        "/assets/img/arrow-left.png",
+                        $path,
+                        1
+                    ));
+                    position: absolute;
+                    right: 0;
+                    top: 28px;
+                }
+            }
+            div.roadmap-inner {
+                @include flexBox(column, flex-start);
+                position: relative;
+                @media screen and (max-width: 768px) {
+                    width: 50vw;
+                }
+                &:last-child {
+                    .content-s {
+                        &::after {
+                            content: unset;
+                        }
+                    }
+                }
+            }
         }
     }
     div.roadmap-inner {
@@ -202,11 +229,31 @@ div.roadmap {
         @media screen and (max-width: 768px) {
             width: 50vw;
         }
+        &:last-child {
+            .content-s {
+                &::after {
+                    content: unset;
+                }
+            }
+        }
         .content {
             color: $primary;
         }
         .content-s {
             padding-top: 2rem;
+            &::after {
+                content: url(str-insert(
+                    "/assets/img/arrow-right.png",
+                    $path,
+                    1
+                ));
+                position: absolute;
+                right: 0;
+                top: 22px;
+                @media screen and (max-width: 991px) {
+                    content: unset !important;
+                }
+            }
         }
     }
     .roadmap-dot {
@@ -267,6 +314,12 @@ div.roadmap {
     @media (max-width: 549px) {
         font-size: 12px;
     }
+}
+#div_block-597-10 {
+    transform: translateY(-36px);
+}
+#div_block-48-19 {
+    transform: translateY(65px);
 }
 
 div.grid-layout {

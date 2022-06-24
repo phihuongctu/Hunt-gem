@@ -111,7 +111,7 @@ bdi {
   position: fixed;
   left: 50%;
   margin: 0 0 0 -20px;
-  bottom: 5rem;
+  bottom: 2rem;
   opacity: 0;
   pointer-events: none;
   width: 40px;
@@ -128,7 +128,7 @@ bdi {
   display: grid;
   position: fixed;
   right: 2rem;
-  bottom: 4rem;
+  bottom: 2rem;
   width: 40px;
   height: 40px;
   place-content: center;
@@ -223,6 +223,46 @@ div.roadmap div.roadmap-item + div.roadmap-item .roadmap-dot {
   top: 32px;
 }
 
+div.roadmap div.roadmap-item + div.roadmap-item .content-s {
+  padding-top: 2rem;
+}
+
+div.roadmap div.roadmap-item + div.roadmap-item .content-s::after {
+  content: url("/modules/huntgem/assets/img/arrow-left.png");
+  position: absolute;
+  right: 0;
+  top: 28px;
+}
+
+div.roadmap div.roadmap-item + div.roadmap-item div.roadmap-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  div.roadmap div.roadmap-item + div.roadmap-item div.roadmap-inner {
+    width: 50vw;
+  }
+}
+
+div.roadmap div.roadmap-item + div.roadmap-item div.roadmap-inner:last-child .content-s::after {
+  content: unset;
+}
+
 div.roadmap div.roadmap-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,12 +288,29 @@ div.roadmap div.roadmap-inner {
   }
 }
 
+div.roadmap div.roadmap-inner:last-child .content-s::after {
+  content: unset;
+}
+
 div.roadmap div.roadmap-inner .content {
   color: #00FFFF;
 }
 
 div.roadmap div.roadmap-inner .content-s {
   padding-top: 2rem;
+}
+
+div.roadmap div.roadmap-inner .content-s::after {
+  content: url("/modules/huntgem/assets/img/arrow-right.png");
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+
+@media screen and (max-width: 991px) {
+  div.roadmap div.roadmap-inner .content-s::after {
+    content: unset !important;
+  }
 }
 
 div.roadmap .roadmap-dot {
@@ -345,6 +402,16 @@ div.roadmap .roadmap-dot {
   .content-s {
     font-size: 12px;
   }
+}
+
+#div_block-597-10 {
+  -webkit-transform: translateY(-36px);
+          transform: translateY(-36px);
+}
+
+#div_block-48-19 {
+  -webkit-transform: translateY(65px);
+          transform: translateY(65px);
 }
 
 div.grid-layout {

@@ -65,6 +65,9 @@ button {
 ul {
     list-style: none;
 }
+.relative {
+    position: relative;
+}
 
 bdi {
     display: inline-block;
@@ -424,5 +427,39 @@ p a {
     div.ct-section-inner-wrap {
         padding-bottom: 2rem;
         padding-top: 48px;
+    }
+}
+.introduction {
+    .placeholder-content {
+        bottom: 32px;
+        right: 0;
+        @media screen and (max-width: 550px) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.placeholder-content {
+    display: none;
+    position: absolute;
+    bottom: 24px;
+    left: 4rem;
+    padding: 1rem;
+    font-size: 12px;
+    max-width: 200px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    z-index: 99;
+    backdrop-filter: blur(20px);
+}
+.description-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:hover {
+        & + .placeholder-content {
+            display: block;
+        }
     }
 }

@@ -45,6 +45,10 @@ a {
     cursor: pointer;
 }
 
+strong {
+    color: $primary;
+}
+
 a {
     &:hover {
         color: $primary;
@@ -453,6 +457,10 @@ p a {
     border-radius: 12px;
     z-index: 99;
     backdrop-filter: blur(20px);
+    @media screen and (max-width: 768px) {
+        overflow-y: scroll;
+        max-height: 200px;
+    }
 }
 .description-icon {
     display: flex;

@@ -54,6 +54,10 @@ a {
   cursor: pointer;
 }
 
+strong {
+  color: #00FFFF;
+}
+
 a:hover {
   color: #00FFFF;
 }
@@ -575,6 +579,13 @@ p a {
   z-index: 99;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+}
+
+@media screen and (max-width: 768px) {
+  .placeholder-content {
+    overflow-y: scroll;
+    max-height: 200px;
+  }
 }
 
 .description-icon {

@@ -551,6 +551,7 @@ p a {
 .introduction .placeholder-content {
   bottom: 32px;
   right: 0;
+  left: auto;
 }
 
 @media screen and (max-width: 550px) {

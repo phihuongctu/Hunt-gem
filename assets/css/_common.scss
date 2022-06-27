@@ -433,6 +433,7 @@ p a {
     .placeholder-content {
         bottom: 32px;
         right: 0;
+        left: auto;
         @media screen and (max-width: 550px) {
             left: 50%;
             transform: translateX(-50%);
